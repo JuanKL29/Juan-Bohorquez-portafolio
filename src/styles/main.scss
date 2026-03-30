@@ -1,0 +1,79 @@
+@use 'variables' as *;
+@use 'reset';
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section {
+  padding: 100px 0;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 48px;
+  position: relative;
+  display: inline-block;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, $accent, $accent-secondary);
+    border-radius: 2px;
+  }
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
+  border-radius: $radius-sm;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all $transition;
+  
+  &--primary {
+    background: $accent;
+    color: white;
+    
+    &:hover {
+      background: darken($accent, 10%);
+      transform: scale(1.05);
+    }
+  }
+  
+  &--outline {
+    border: 2px solid $accent;
+    color: $accent;
+    
+    &:hover {
+      background: $accent;
+      color: white;
+    }
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: $bg-secondary;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $border;
+  border-radius: 4px;
+  
+  &:hover {
+    background: $text-secondary;
+  }
+}

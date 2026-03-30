@@ -1,0 +1,51 @@
+@use '../styles/variables' as *;
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  @include glass;
+  border-radius: 0;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  padding: 16px 0;
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, $accent, $accent-secondary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    ul {
+      display: flex;
+      gap: 32px;
+
+      a {
+        color: $text-secondary;
+        font-weight: 500;
+        transition: color $transition;
+
+        &:hover {
+          color: $accent;
+        }
+      }
+    }
+
+    .nav-links {
+      @media (max-width: 768px) {
+        display: none;
+      }
+    }
+  }
+}

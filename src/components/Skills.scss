@@ -1,0 +1,58 @@
+@use '../styles/variables' as *;
+
+.skills {
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+  }
+
+  &__card {
+    @include card;
+  }
+
+  &__category {
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: $accent;
+    margin-bottom: 24px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__item {
+    &-header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 8px;
+    }
+
+    &-name {
+      font-weight: 500;
+    }
+
+    &-percent {
+      color: $text-secondary;
+      font-size: 0.875rem;
+    }
+
+    &-bar {
+      height: 6px;
+      background: $bg-tertiary;
+      border-radius: 3px;
+      overflow: hidden;
+
+      &-fill {
+        height: 100%;
+        background: linear-gradient(90deg, $accent, $accent-secondary);
+        border-radius: 3px;
+        transition: width 1s ease;
+      }
+    }
+  }
+}

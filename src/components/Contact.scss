@@ -1,0 +1,103 @@
+@use '../styles/variables' as *;
+
+.contact {
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__info {
+    h3 {
+      font-size: 1.5rem;
+      margin-bottom: 16px;
+    }
+
+    p {
+      color: $text-secondary;
+      margin-bottom: 32px;
+    }
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+    @include glass;
+    border-radius: $radius-sm;
+    transition: all $transition;
+
+    &:hover {
+      background: rgba($accent, 0.1);
+      transform: translateX(8px);
+    }
+
+    svg {
+      width: 24px;
+      height: 24px;
+      color: $accent;
+    }
+
+    span {
+      flex: 1;
+    }
+  }
+
+  &__form {
+    @include card;
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    label {
+      font-size: 0.875rem;
+      color: $text-secondary;
+    }
+
+    input,
+    textarea {
+      padding: 14px 16px;
+      background: $bg-primary;
+      border: 1px solid $border;
+      border-radius: $radius-sm;
+      color: $text-primary;
+      font-family: inherit;
+      font-size: 1rem;
+      transition: border-color $transition;
+
+      &:focus {
+        outline: none;
+        border-color: $accent;
+      }
+
+      &::placeholder {
+        color: $text-secondary;
+      }
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+  }
+}

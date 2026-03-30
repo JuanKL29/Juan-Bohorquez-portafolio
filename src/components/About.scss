@@ -1,0 +1,74 @@
+@use '../styles/variables' as *;
+
+.about {
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__image {
+    position: relative;
+    
+    &-placeholder {
+      width: 100%;
+      aspect-ratio: 1;
+      @include glass;
+      border-radius: $radius;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 6rem;
+      background: linear-gradient(135deg, $accent, $accent-secondary);
+      opacity: 0.2;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 20px;
+      border: 2px solid $accent;
+      border-radius: $radius;
+      z-index: -1;
+    }
+  }
+
+  &__text {
+    p {
+      color: $text-secondary;
+      margin-bottom: 24px;
+      font-size: 1.1rem;
+    }
+  }
+
+  &__info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+
+    @media (max-width: 480px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    @include card;
+    padding: 16px;
+
+    span {
+      display: block;
+      font-size: 0.875rem;
+      color: $text-secondary;
+      margin-bottom: 4px;
+    }
+
+    strong {
+      font-size: 1.1rem;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+$bg-primary: #1e1e1e;
+$bg-secondary: #252526;
+$bg-tertiary: #2d2d2d;
+$accent: #007aff;
+$accent-secondary: #5856d6;
+$text-primary: #ffffff;
+$text-secondary: #8e8e93;
+$border: #3d3d3d;
+
+$font-main: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif;
+$font-mono: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+
+$radius: 12px;
+$radius-sm: 8px;
+$transition: 0.3s ease;
+
+@mixin glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@mixin card {
+  @include glass;
+  border-radius: $radius;
+  padding: 24px;
+  transition: transform $transition, box-shadow $transition;
+  
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  }
+}

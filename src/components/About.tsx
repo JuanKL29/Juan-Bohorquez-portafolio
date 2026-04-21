@@ -1,5 +1,6 @@
 import './About.scss';
 import { info } from '../data/portfolio';
+import profileImg from '/JuanBohorquez.jpg';
 
 export function About() {
   return (
@@ -8,7 +9,7 @@ export function About() {
         <h2 className="section-title">Sobre mí</h2>
         <div className="about__content">
           <div className="about__image">
-            <div className="about__image-placeholder">👨‍💻</div>
+            <img src={profileImg} alt="Mi foto" />
           </div>
           <div className="about__text">
             <p>{info.bio}</p>

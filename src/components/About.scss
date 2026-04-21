@@ -15,14 +15,6 @@
   &__image {
     position: relative;
     
-    img.about__image-placeholder {
-      width: 100%;
-      aspect-ratio: 1;
-      @include glass;
-      border-radius: $radius;
-      object-fit: cover;
-    }
-
     &-placeholder {
       width: 100%;
       aspect-ratio: 1;

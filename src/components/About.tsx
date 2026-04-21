@@ -8,7 +8,7 @@ export function About() {
         <h2 className="section-title">Sobre mí</h2>
         <div className="about__content">
           <div className="about__image">
-            <img src="/JuanBohorquez.jpg" alt={info.name} className="about__image-placeholder" />
+            <div className="about__image-placeholder">👨‍💻</div>
           </div>
           <div className="about__text">
             <p>{info.bio}</p>

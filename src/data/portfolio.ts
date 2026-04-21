@@ -50,10 +50,10 @@ export const skills: Skill[] = [
 
 export const info = {
   name: 'Juan Jose Bohorquez Pabon',
-  role: 'Desarrollador Fronted',
-  location: 'Cucuta, Colombia',
+  role: 'Desarrollador Frontend',
+  location: 'Cúcuta, Colombia',
   bio: 'Desarrollador pasionado por crear experiencias web increíbles.',
   email: 'juan29021117@gmail.com',
-  github: 'https://github.com/tuusuario',
-  linkedin: 'https://linkedin.com/in/tuusuario',
+  github: 'https://github.com/JuanKL29',
+  linkedin: 'https://www.linkedin.com/in/juanjosebohorquez29/',
 };

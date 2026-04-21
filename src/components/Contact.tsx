@@ -1,7 +1,32 @@
+import { useRef, type FormEvent } from 'react';
+import emailjs from '@emailjs/browser';
 import './Contact.scss';
 import { info } from '../data/portfolio';
 
 export function Contact() {
+  const formRef = useRef<HTMLFormElement>(null);
+
+  const handleSubmit = (e: FormEvent) => {
+    e.preventDefault();
+    
+    if (formRef.current) {
+      emailjs
+        .sendForm(
+          'service_dqfu7v7',
+          'template_8t9q968',
+          formRef.current,
+          'U_CTvH80ty0NRetgn'
+        )
+        .then(() => {
+          alert('Mensaje enviado correctamente!');
+          formRef.current?.reset();
+        })
+        .catch(() => {
+          alert('Error al enviar el mensaje. Intenta de nuevo.');
+        });
+    }
+  };
+
   return (
     <section className="contact section" id="contact">
       <div className="container">
@@ -33,18 +58,18 @@ export function Contact() {
             </div>
           </div>
           <div className="contact__form">
-            <form onSubmit={(e) => e.preventDefault()}>
+            <form ref={formRef} onSubmit={handleSubmit}>
               <div className="contact__field">
-                <label htmlFor="name">Nombre</label>
-                <input type="text" id="name" placeholder="Tu nombre" />
+                <label htmlFor="from_name">Nombre</label>
+                <input type="text" id="from_name" name="from_name" placeholder="Tu nombre" required />
               </div>
               <div className="contact__field">
-                <label htmlFor="email">Email</label>
-                <input type="email" id="email" placeholder="tu@email.com" />
+                <label htmlFor="from_email">Email</label>
+                <input type="email" id="from_email" name="from_email" placeholder="tu@email.com" required />
               </div>
               <div className="contact__field">
                 <label htmlFor="message">Mensaje</label>
-                <textarea id="message" placeholder="Tu mensaje..." />
+                <textarea id="message" name="message" placeholder="Tu mensaje..." required />
               </div>
               <button type="submit" className="btn btn--primary">
                 Enviar mensaje

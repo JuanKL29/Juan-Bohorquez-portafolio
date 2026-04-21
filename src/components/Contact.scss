@@ -3,101 +3,109 @@
 .contact {
   &__content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 48px;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 64px;
 
     @media (max-width: 768px) {
       grid-template-columns: 1fr;
+      gap: 48px;
     }
   }
 
   &__info {
     h3 {
-      font-size: 1.5rem;
-      margin-bottom: 16px;
+      font-size: 1.6rem;
+      margin-bottom: 18px;
+      font-weight: 600;
     }
 
     p {
       color: $text-secondary;
-      margin-bottom: 32px;
+      margin-bottom: 36px;
+      font-size: 1.05rem;
+      line-height: 1.6;
     }
   }
 
   &__links {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 18px;
   }
 
   &__link {
     display: flex;
     align-items: center;
-    gap: 16px;
-    padding: 16px;
+    gap: 18px;
+    padding: 18px 20px;
     @include glass;
     border-radius: $radius-sm;
     transition: all $transition;
 
     &:hover {
-      background: rgba($accent, 0.1);
+      background: rgba($accent, 0.08);
       transform: translateX(8px);
     }
 
     svg {
-      width: 24px;
-      height: 24px;
+      width: 22px;
+      height: 22px;
       color: $accent;
     }
 
     span {
       flex: 1;
+      font-weight: 500;
     }
   }
 
   &__form {
     @include card;
+    padding: 32px;
 
     form {
       display: flex;
       flex-direction: column;
-      gap: 20px;
+      gap: 24px;
     }
   }
 
   &__field {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 10px;
 
     label {
-      font-size: 0.875rem;
+      font-size: 0.85rem;
       color: $text-secondary;
+      font-weight: 500;
     }
 
     input,
     textarea {
-      padding: 14px 16px;
-      background: $bg-primary;
-      border: 1px solid $border;
+      padding: 16px 18px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.1);
       border-radius: $radius-sm;
       color: $text-primary;
       font-family: inherit;
       font-size: 1rem;
-      transition: border-color $transition;
+      transition: all $transition;
 
       &:focus {
         outline: none;
         border-color: $accent;
+        background: rgba(255, 255, 255, 0.06);
       }
 
       &::placeholder {
-        color: $text-secondary;
+        color: rgba($text-secondary, 0.6);
       }
     }
 
     textarea {
       resize: vertical;
-      min-height: 120px;
+      min-height: 140px;
     }
   }
 }

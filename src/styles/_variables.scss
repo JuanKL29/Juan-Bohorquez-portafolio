@@ -1,33 +1,50 @@
-$bg-primary: #1e1e1e;
-$bg-secondary: #252526;
-$bg-tertiary: #2d2d2d;
-$accent: #007aff;
-$accent-secondary: #5856d6;
-$text-primary: #ffffff;
-$text-secondary: #8e8e93;
-$border: #3d3d3d;
+$bg-primary: #0d0d0d;
+$bg-secondary: #1a1a1a;
+$bg-tertiary: #262626;
+$accent: #5e9ce6;
+$accent-secondary: #7d7aff;
+$text-primary: #f5f5f7;
+$text-secondary: #86868b;
+$border: #2d2d2d;
 
 $font-main: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif;
 $font-mono: 'SF Mono', 'Fira Code', 'Consolas', monospace;
 
-$radius: 12px;
-$radius-sm: 8px;
-$transition: 0.3s ease;
+$radius: 16px;
+$radius-sm: 10px;
+$transition: 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
 
 @mixin glass {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
   border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
 }
 
 @mixin card {
   @include glass;
   border-radius: $radius;
-  padding: 24px;
+  padding: 32px;
   transition: transform $transition, box-shadow $transition;
   
   &:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    transform: translateY(-6px);
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.25);
+  }
+}
+
+@mixin fade-in {
+  animation: fadeIn 0.6s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

@@ -11,7 +11,7 @@ header {
   border-top: none;
   border-left: none;
   border-right: none;
-  padding: 16px 0;
+  padding: 14px 0;
 
   nav {
     display: flex;
@@ -19,22 +19,25 @@ header {
     align-items: center;
 
     .logo {
-      font-size: 1.5rem;
-      font-weight: 700;
+      font-size: 1.4rem;
+      font-weight: 600;
       background: linear-gradient(135deg, $accent, $accent-secondary);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
+      letter-spacing: -0.02em;
     }
 
     ul {
       display: flex;
-      gap: 32px;
+      gap: 36px;
 
       a {
         color: $text-secondary;
-        font-weight: 500;
-        transition: color $transition;
+        font-weight: 450;
+        font-size: 0.9rem;
+        transition: all $transition;
+        letter-spacing: 0.01em;
 
         &:hover {
           color: $accent;

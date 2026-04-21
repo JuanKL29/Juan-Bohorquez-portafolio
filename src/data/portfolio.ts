@@ -49,10 +49,9 @@ export const skills: Skill[] = [
 ];
 
 export const info = {
-  name: 'Juan Jose Bohorquez Pabon',
-  role: 'Desarrollador Frontend',
-  location: 'Cúcuta, Colombia',
-  bio: 'Desarrollador pasionado por crear experiencias web increíbles.',
+  name: 'Juan Bohorquez',
+  role: 'Desarrollador Frontend enfocado en interfaces modernas e intuitivas',
+  bio: 'Apasionado por el desarrollo web, enfocado en diseñar y construir experiencias digitales atractivas, funcionales y centradas en el usuario.',
   email: 'juan29021117@gmail.com',
   github: 'https://github.com/JuanKL29',
   linkedin: 'https://www.linkedin.com/in/juanjosebohorquez29/',

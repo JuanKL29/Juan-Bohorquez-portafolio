@@ -8,7 +8,7 @@ export function Hero() {
         <div className="hero__content">
           <div className="hero__badge">Disponible para trabajar</div>
           <h1 className="hero__title">
-            Hola, soy <span>{info.name}</span>
+            <span>{info.name}</span>
           </h1>
           <p className="hero__subtitle">{info.role}</p>
           <div className="hero__buttons">

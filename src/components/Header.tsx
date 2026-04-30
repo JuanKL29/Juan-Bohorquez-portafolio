@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import logoImg from '/logo.jpg';
 import './Header.scss';
 
 export function Header() {
@@ -10,7 +11,9 @@ export function Header() {
     <header>
       <div className="container">
         <nav>
-          <a href="#" className="logo">JB</a>
+          <a href="#" className="logo">
+            <img src={logoImg} alt="Logo" />
+          </a>
           <button className="nav-toggle" onClick={() => setOpen(!open)} aria-label="Menú">
             <span className={`nav-toggle__line ${open ? 'nav-toggle__line--active' : ''}`} />
             <span className={`nav-toggle__line ${open ? 'nav-toggle__line--active' : ''}`} />

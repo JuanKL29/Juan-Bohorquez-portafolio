@@ -16,7 +16,7 @@ function App() {
         <Contact />
       </main>
       <footer style={{ textAlign: 'center', padding: '24px', color: 'var(--text-secondary)' }}>
-        <p>© 2026 Juan Jose Bohorquez Pabon. Todos los derechos reservados.</p>
+        <p>© 2026 Todos los derechos reservados.</p>
       </footer>
     </>
   );

@@ -1,6 +1,15 @@
 import bibliotecaImg from '/biblioteca.jpg';
 import taxisImg from '/taxis.jpg';
 import snakeImg from '/snake.jpg';
+import html5Img from '/html5.png';
+import css3Img from '/css3.png';
+import javascriptImg from '/javascript.png';
+import pythonImg from '/python.png';
+import mysqlImg from '/mysql.png';
+import javaImg from '/java.png';
+import phpImg from '/php.png';
+import cppImg from '/cpp.png';
+import gitImg from '/git.png';
 
 export interface Project {
   id: number;
@@ -14,7 +23,9 @@ export interface Project {
 
 export interface Skill {
   name: string;
-  level: number;
+  level?: number;
+  color: string;
+  icon?: string;
   category: 'frontend' | 'backend' | 'tools';
 }
 
@@ -24,8 +35,8 @@ export const projects: Project[] = [
     title: 'Biblioteca Personal',
     description: 'Desarrollé una página web para la gestión de una biblioteca personal, que permite administrar libros mediante operaciones CRUD (crear, consultar, actualizar y eliminar). La estructura fue construida con HTML5 y los estilos con CSS3, mientras que la lógica se implementó con JavaScript, incluyendo la conexión a Firebase para el almacenamiento y sincronización de datos en tiempo real.Este proyecto fortaleció mis habilidades en desarrollo web, manejo de bases de datos en la nube y organización de información mediante soluciones prácticas.',
     tags: ['HTML5', 'CSS3', 'JavaScript', 'Base de Datos'],
-    github: 'https://juankl29.github.io/mi-biblioteca/',
     image: bibliotecaImg,
+    github: 'https://juankl29.github.io/mi-biblioteca/',
   },
   {
     id: 2,
@@ -46,14 +57,15 @@ export const projects: Project[] = [
 ];
 
 export const skills: Skill[] = [
-  { name: 'React', level: 90, category: 'frontend' },
-  { name: 'TypeScript', level: 85, category: 'frontend' },
-  { name: 'SCSS/CSS', level: 90, category: 'frontend' },
-  { name: 'JavaScript', level: 90, category: 'frontend' },
-  { name: 'Node.js', level: 80, category: 'backend' },
-  { name: 'PostgreSQL', level: 75, category: 'backend' },
-  { name: 'Git', level: 85, category: 'tools' },
-  { name: 'Docker', level: 70, category: 'tools' },
+  { name: 'HTML5', color: '#E34F26', icon: html5Img, category: 'frontend' },
+  { name: 'CSS3', color: '#1572B6', icon: css3Img, category: 'frontend' },
+  { name: 'JavaScript', color: '#F7DF1E', icon: javascriptImg, category: 'frontend' },
+  { name: 'Python', color: '#3776AB', icon: pythonImg, category: 'backend' },
+  { name: 'MySQL', color: '#4479A1', icon: mysqlImg, category: 'backend' },
+  { name: 'Java', color: '#ED8B00', icon: javaImg, category: 'backend' },
+  { name: 'PHP', color: '#777BB4', icon: phpImg, category: 'backend' },
+  { name: 'C++', color: '#00599C', icon: cppImg, category: 'backend' },
+  { name: 'Git', color: '#000000', icon: gitImg, category: 'tools' },
 ];
 
 export const info = {
